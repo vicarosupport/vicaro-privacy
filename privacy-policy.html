@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Vicaro - Privacy policy</title>
+  <style>
+    :root {
+      --fg: #121212;
+      --muted: #5a5a5a;
+      --line: #d8d8d8;
+      --bg: #fff;
+      --fill: #f6f6f6;
+      --code: #f0f0f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #ededed;
+        --muted: #a3a3a3;
+        --line: #3a3a3a;
+        --bg: #111;
+        --fill: #1c1c1c;
+        --code: #2a2a2a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    .langs {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      margin-bottom: 2.25rem;
+      color: var(--muted);
+    }
+    .langs a { color: inherit; }
+    header.mast {
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 1.75rem;
+    }
+    .kicker {
+      margin: 0 0 0.45rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    [dir="rtl"] .kicker {
+      letter-spacing: 0.04em;
+      text-transform: none;
+    }
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: 1.85rem;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+    .lede {
+      margin: 0;
+      font-size: 1.08rem;
+      color: var(--fg);
+    }
+    .meta {
+      margin: 1.1rem 0 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .meta a { color: var(--fg); }
+    h2 {
+      margin: 2.1rem 0 0.7rem;
+      font-size: 1.05rem;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    p, li, dd, td { overflow-wrap: break-word; }
+    p { margin: 0.65rem 0; }
+    ul {
+      margin: 0.4rem 0 0.8rem;
+      padding-inline-start: 1.2rem;
+    }
+    li { margin: 0.35rem 0; }
+    dl {
+      margin: 0.5rem 0 0;
+    }
+    dt {
+      margin-top: 0.85rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    dd { margin: 0.2rem 0 0; }
+    code {
+      font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.86em;
+      background: var(--code);
+      padding: 0.08em 0.35em;
+    }
+    .note {
+      margin: 1rem 0 0;
+      padding: 0.85rem 1rem;
+      background: var(--fill);
+      border: 1px solid var(--line);
+      font-size: 0.94rem;
+    }
+    .note p { margin: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.6rem 0 1rem;
+    }
+    th, td {
+      text-align: start;
+      vertical-align: top;
+      padding: 0.55rem 0.6rem;
+      border-bottom: 1px solid var(--line);
+    }
+    th {
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    hr.split {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 3.2rem 0;
+    }
+    footer.doc {
+      margin-top: 2.4rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="langs" aria-label="Language">
+      <a href="#en">English</a>
+      <a href="#ar">العربية</a>
+    </nav>
+
+    <article id="en" lang="en">
+      <header class="mast">
+        <p class="kicker">Vicaro · Version 1.0.0</p>
+        <h1>Privacy policy</h1>
+        <p class="lede">Vicaro is a local Chrome extension. It replaces detected values in technical text - logs, configs, tokens, addresses - with substitutes on this device, then restores the originals from the <strong>active session</strong> map when you ask. It exists so you can paste into other tools without handing them the raw secrets sitting in the text you started from.</p>
+        <p class="meta">
+          Contact and security reports:
+          <a href="mailto:vicaro.support@gmail.com">vicaro.support@gmail.com</a>
+        </p>
+      </header>
+
+      <h2>What this policy covers</h2>
+      <p>This page describes what the 1.0.0 extension stores, what it does not store, and what we have actually shown about network behaviour. It is not a legal opinion and it does not claim compliance with any law or standard.</p>
+
+      <h2>How the product works</h2>
+      <p>You paste or type text in the side panel or popup, or you select text on a page. Masking writes substitutes into a map for the active session only. Unmasking reads that same map. Custom lists, exclusions, and public settings are shared across sessions. The original text stays in the site editor or field you started from; the extension copies the result and does not rewrite the page.</p>
+      <p>There is no account. “Pro” is the product name, not a paid plan. This 1.0.0 build is free: no license code and no feature gate.</p>
+      <div class="note">
+        <p>Detection is rule-based. Values that do not match a rule or a custom entry are left unchanged. Clearing a field in the UI does not guarantee that the value is gone from process memory. The extension cannot protect you from malware on the same machine.</p>
+      </div>
+
+      <h2>What is stored on this device</h2>
+      <dl>
+        <dt>Encrypted vault</dt>
+        <dd>Session maps and secret lists (custom values, custom expressions, exclusions) in <code>chrome.storage.local</code>, sealed with AES-GCM. New vaults derive keys with PBKDF2-HMAC-SHA256 (600000 iterations, random salt). You set a passphrase of at least 12 characters.</dd>
+        <dt>While unlocked</dt>
+        <dd>The derived key is kept in <code>chrome.storage.session</code> only. It is not written to local storage after a successful unlock. The passphrase itself is discarded after it has been used to derive the key.</dd>
+        <dt>Public settings</dt>
+        <dd>Processing options, theme, and language in <code>chrome.storage.local</code>, in the clear.</dd>
+        <dt>Lock</dt>
+        <dd>Idle timeout (default 15 minutes; 0 means until the browser session ends) and a 12-hour ceiling. On lock, idle, that ceiling, or when Chrome ends the session store, the session key is dropped and vault fields on open surfaces are cleared. Encrypted records remain until you wipe the vault, clear the extension’s storage, or uninstall.</dd>
+      </dl>
+      <p>Incognito is not allowed. A shared profile would have written vault data from a private window into the normal profile.</p>
+
+      <h2>What is not stored</h2>
+      <ul>
+        <li>The passphrase after a successful unlock</li>
+        <li>Browsing history</li>
+        <li>An account, analytics identifier, or telemetry channel</li>
+      </ul>
+
+      <h2>Network</h2>
+      <p>The packaged zip contains no product code that opens network connections. That is shown by a static scan for <code>fetch</code>, <code>XMLHttpRequest</code>, <code>WebSocket</code>, <code>sendBeacon</code>, and <code>EventSource</code>.</p>
+      <p>During a full use cycle, no requests were observed from extension pages. In that capture the offscreen document was not a network target, so this page does not claim a stronger result than that measurement.</p>
+
+      <h2>Permissions</h2>
+      <p>Each permission exists so mask and unmask can run where you asked. There are no <code>host_permissions</code>.</p>
+      <table>
+        <thead>
+          <tr><th>Permission</th><th>Why</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>clipboardWrite</code></td><td>Copy masked or restored text from the toolbar, popup, and panel.</td></tr>
+          <tr><td><code>clipboardRead</code></td><td>Paste from the clipboard when you use the panel paste buttons.</td></tr>
+          <tr><td><code>storage</code></td><td>Keep the encrypted vault, public settings, theme, and language on this device.</td></tr>
+          <tr><td><code>sidePanel</code></td><td>Host the full panel beside the page.</td></tr>
+          <tr><td><code>contextMenus</code></td><td>Mask, unmask, and open the panel from the page context menu.</td></tr>
+          <tr><td><code>alarms</code></td><td>Fire idle-lock and 12-hour-ceiling checks while the service worker is asleep.</td></tr>
+          <tr><td><code>offscreen</code></td><td>Run the mask worker off the service-worker thread for toolbar, popup, shortcut, and menu jobs.</td></tr>
+          <tr><td>Content script on <code>&lt;all_urls&gt;</code></td><td>Inject the selection toolbar and context-menu helper on ordinary pages. It does not run inside subframes or closed Shadow DOM.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Your controls</h2>
+      <p>Lock the vault, wipe it (with an in-extension confirm), export or import session maps that you choose to save as files, and uninstall. A wipe removes encrypted records on this device; it does not reach files you already downloaded.</p>
+      <p>Exported session files contain originals and substitutes in clear text. That is why export asks for confirmation.</p>
+
+      <h2>Children</h2>
+      <p>The product is not directed at children.</p>
+
+      <h2>Changes</h2>
+      <p>Material changes to this text ship with a version increase.</p>
+    </article>
+
+    <hr class="split">
+
+    <article id="ar" lang="ar" dir="rtl">
+      <header class="mast">
+        <p class="kicker">Vicaro · الإصدار 1.0.0</p>
+        <h1>سياسة الخصوصية</h1>
+        <p class="lede">Vicaro إضافة Chrome محلية. تستبدل القيَم المكتشفة في النص التقني - سجلات، إعدادات، رموز، عناوين - ببدائل على هذا الجهاز، ثم تسترجع الأصول من خريطة <strong>الجلسة النشطة</strong> عندما تطلب ذلك. وُجدت كي تلصق في أدوات أخرى دون تسليم الأسرار الخام الموجودة في النص الذي بدأت منه.</p>
+        <p class="meta">
+          التواصل وتقارير الأمن:
+          <a href="mailto:vicaro.support@gmail.com">vicaro.support@gmail.com</a>
+        </p>
+      </header>
+
+      <h2>ماذا تغطي هذه السياسة</h2>
+      <p>تصف هذه الصفحة ما تخزّنه إضافة 1.0.0، وما لا تخزّنه، وما أُثبت عن سلوك الشبكة. ليست رأياً قانونياً ولا تدّعي الامتثال لقانون أو معيار.</p>
+
+      <h2>كيف يعمل المنتج</h2>
+      <p>تلصق النص أو تكتبه في اللوحة أو المنبثقة، أو تحدّد نصاً في الصفحة. الإخفاء يكتب البدائل في خريطة الجلسة النشطة فقط. الاسترجاع يقرأ تلك الخريطة. القوائم المخصصة والاستثناءات والإعدادات العامة مشتركة بين الجلسات. النص الأصلي يبقى في محرر الموقع أو الحقل الذي بدأت منه؛ الإضافة تنسخ الناتج ولا تعيد كتابة الصفحة.</p>
+      <p>لا حساب. «Pro» اسم المنتج وليست خطة مدفوعة. إصدار 1.0.0 مجاني: لا رمز ترخيص ولا بوابة ميزات.</p>
+      <div class="note">
+        <p>الكشف قائم على قواعد. ما لا يطابق قاعدة أو إدخالاً مخصصاً يبقى كما هو. مسح حقل في الواجهة لا يضمن اختفاء القيمة من ذاكرة العملية. الإضافة لا تحميك من برمجية خبيثة على الجهاز نفسه.</p>
+      </div>
+
+      <h2>ما يُحفظ على هذا الجهاز</h2>
+      <dl>
+        <dt>خزنة مشفّرة</dt>
+        <dd>خرائط الجلسات والقوائم السرية (قيم مخصصة، تعابير مخصصة، استثناءات) في <code>chrome.storage.local</code>، مغلقة بـ AES-GCM. الخزائن الجديدة تشتق المفتاح بـ PBKDF2-HMAC-SHA256 (600000 تكرار، ملح عشوائي). جملة المرور لا تقل عن 12 حرفاً.</dd>
+        <dt>أثناء الفتح</dt>
+        <dd>المفتاح المشتق يبقى في <code>chrome.storage.session</code> فقط. لا يُكتب في التخزين المحلي بعد الفتح الناجح. جملة المرور تُستبعد بعد اشتقاق المفتاح.</dd>
+        <dt>إعدادات عامة</dt>
+        <dd>خيارات المعالجة والثيم واللغة في <code>chrome.storage.local</code> بنص واضح.</dd>
+        <dt>القفل</dt>
+        <dd>مهلة خمول (الافتراضي 15 دقيقة؛ 0 يعني حتى نهاية جلسة المتصفح) وسقف 12 ساعة. عند القفل أو الخمول أو ذلك السقف أو عند إنهاء Chrome لمخزن الجلسة يُحذف مفتاح الجلسة وتُمسح حقول الخزنة في الأسطح المفتوحة. السجلات المشفّرة تبقى حتى تمسح الخزنة أو تخزين الإضافة أو تزيلها.</dd>
+      </dl>
+      <p>التصفح الخفي غير مسموح. الملف المشترك كان سيكتب بيانات الخزنة من نافذة خاصة إلى الملف العادي.</p>
+
+      <h2>ما لا يُحفظ</h2>
+      <ul>
+        <li>جملة المرور بعد الفتح الناجح</li>
+        <li>سجل التصفح</li>
+        <li>حساب أو معرّف قياس استخدام أو قناة عن بعد</li>
+      </ul>
+
+      <h2>الشبكة</h2>
+      <p>الحزمة المعبأة لا تحوي شيفرة منتج تفتح اتصالات شبكة. هذا مثبت بمسح ساكن عن <code>fetch</code> و<code>XMLHttpRequest</code> و<code>WebSocket</code> و<code>sendBeacon</code> و<code>EventSource</code>.</p>
+      <p>أثناء دورة استعمال كاملة لم تُرصد طلبات من صفحات الإضافة. في ذلك الالتقاط لم تكن وثيقة offscreen هدف شبكة، ولذلك لا تدّعي هذه الصفحة نتيجة أقوى من ذلك القياس.</p>
+
+      <h2>الصلاحيات</h2>
+      <p>كل صلاحية موجودة لتشغيل الإخفاء والاسترجاع حيث طلبت. لا توجد <code>host_permissions</code>.</p>
+      <table>
+        <thead>
+          <tr><th>الصلاحية</th><th>السبب</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>clipboardWrite</code></td><td>نسخ النص المخفى أو المسترجع من الشريط والمنبثقة واللوحة.</td></tr>
+          <tr><td><code>clipboardRead</code></td><td>اللصق من الحافظة عند استخدام أزرار اللصق في اللوحة.</td></tr>
+          <tr><td><code>storage</code></td><td>حفظ الخزنة المشفّرة والإعدادات العامة والثيم واللغة على هذا الجهاز.</td></tr>
+          <tr><td><code>sidePanel</code></td><td>عرض اللوحة الكاملة بجانب الصفحة.</td></tr>
+          <tr><td><code>contextMenus</code></td><td>إخفاء واسترجاع وفتح اللوحة من قائمة سياق الصفحة.</td></tr>
+          <tr><td><code>alarms</code></td><td>إطلاق فحوص قفل الخمول وسقف 12 ساعة بينما عامل الخدمة نائم.</td></tr>
+          <tr><td><code>offscreen</code></td><td>تشغيل عامل الإخفاء خارج خيط عامل الخدمة لمهام الشريط والمنبثقة والاختصار والقائمة.</td></tr>
+          <tr><td>سكربت محتوى على <code>&lt;all_urls&gt;</code></td><td>حقن شريط التحديد ومساعد قائمة السياق في الصفحات العادية. لا يعمل داخل الإطارات الفرعية ولا Shadow DOM المغلق.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>سيطرتك</h2>
+      <p>اقفل الخزنة، امسحها (مع تأكيد داخل الإضافة)، صدّر أو استورد خرائط جلسات تختار حفظها كملفات، أو أزل الإضافة. المسح يحذف السجلات المشفّرة على هذا الجهاز ولا يصل إلى ملفات نزّلتها سابقاً.</p>
+      <p>ملفات الجلسة المصدَّرة تحوي الأصل والبديل بنص صريح. لذلك يطلب التصدير تأكيداً.</p>
+
+      <h2>الأطفال</h2>
+      <p>المنتج غير موجّه للأطفال.</p>
+
+      <h2>التغييرات</h2>
+      <p>أي تغيير جوهري في هذا النص يصدر مع زيادة رقم الإصدار.</p>
+    </article>
+
+    <footer class="doc">
+      Vicaro 1.0.0 · Processing stays on this device ·
+      <a href="mailto:vicaro.support@gmail.com">vicaro.support@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
